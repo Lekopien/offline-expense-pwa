@@ -1,5 +1,5 @@
 // Cache-first service worker: the whole app works with no network after the first visit.
-const VERSION = "v1";
+const VERSION = "v2";
 const ASSETS = ["./", "index.html", "style.css", "app.js", "db.js", "logic.js", "manifest.webmanifest", "icon.svg"];
 
 self.addEventListener("install", (e) => {

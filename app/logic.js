@@ -2,8 +2,8 @@
 
 export const CATEGORIES = {
   food: { label: "Food", color: "#f59e0b" },
-  transport: { label: "Transport", color: "#22d3ee" },
-  bills: { label: "Bills", color: "#7c5cff" },
+  transport: { label: "Transport", color: "#00f0ff" },
+  bills: { label: "Bills", color: "#ddb7ff" },
   shopping: { label: "Shopping", color: "#f472b6" },
   health: { label: "Health", color: "#34d399" },
   fun: { label: "Fun", color: "#fb7185" },
