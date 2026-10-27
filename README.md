@@ -45,3 +45,7 @@ Bump `VERSION` in `app/sw.js` when you change any file, so returning visitors ge
 ## License
 
 MIT
+
+## Author
+
+Built by **David Lekopien** ([@Lekopien](https://github.com/Lekopien)) · [lekopien.com](https://lekopien.com)
