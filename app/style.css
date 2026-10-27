@@ -1,12 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300..800&family=JetBrains+Mono:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300..800&family=JetBrains+Mono:wght@400..700&family=Space+Grotesk:wght@500&display=swap");
 :root { --bg: #0d1515; --panel: #151d1e; --line: rgba(0, 240, 255, 0.15); --text: #dce4e5; --muted: #b9cacb; --accent: #00f0ff; --accent-hover: #dbfcff; --on-accent: #0d1515; --accent-2: #ddb7ff; --ok: #10b981; --bad: #ff8b8b; color-scheme: dark; }
 [hidden] { display: none !important; }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.5 Inter, ui-sans-serif, system-ui, sans-serif; }
 header, main, footer { max-width: 720px; margin: 0 auto; padding: 0 16px; }
 header { display: flex; align-items: center; gap: 10px; height: 60px; }
-.brand { font-weight: 700; color: var(--text); text-decoration: none; } .brand span { color: var(--accent); }
-.net { font-size: 12px; color: var(--muted); border: 1px solid var(--line); border-radius: 99px; padding: 2px 10px; margin-left: auto; }
+ .net { font-size: 12px; color: var(--muted); border: 1px solid var(--line); border-radius: 99px; padding: 2px 10px; margin-left: auto; }
 .card { background: var(--panel); border: 1px solid var(--line); border-radius: 4px; padding: 18px; margin-bottom: 14px; }
 .summary { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; }
 @media (max-width: 560px) { .summary { grid-template-columns: 1fr; } }
@@ -37,3 +36,10 @@ input, select, button, .file { font: inherit; color: var(--text); background: va
 .file input { display: none; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 footer { color: var(--muted); font-size: 13px; padding: 24px 16px 40px; } footer a { color: var(--accent); }
+
+/* Pixel Grid logo lockup: mark, then the LEKOPIEN wordmark (Space Grotesk), then the site name. */
+.brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); }
+.brand img { width: 24px; height: 24px; flex: none; display: block; }
+.brand b { font: 500 15px "Space Grotesk", Inter, sans-serif; letter-spacing: .18em; color: var(--text); }
+.brand small { font: 500 11px var(--mono, "JetBrains Mono", monospace); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); border-left: 1px solid var(--line); padding-left: 10px; }
+.brand:hover b { color: var(--accent); }
