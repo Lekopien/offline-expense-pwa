@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Expenses · Lekopien</title>
+  <meta name="description" content="An installable expense tracker that works offline. Your data stays on your device.">
+  <meta name="theme-color" content="#7c5cff">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="https://lekopien.com">lekopien<span>.</span>expenses</a>
+    <span class="net" id="net"></span>
+    <button id="install" class="ghost" hidden>Install app</button>
+  </header>
+  <main>
+    <section class="card summary">
+      <div>
+        <label class="sr" for="month">Month</label>
+        <input type="month" id="month">
+        <h1 id="total">KES 0</h1>
+        <p id="avg" class="muted"></p>
+        <div class="budget"><i id="budgetBar"></i></div>
+        <p id="budgetText" class="muted"></p>
+      </div>
+      <div class="chart">
+        <svg id="donut" viewBox="0 0 164 164" aria-label="Spending by category"></svg>
+        <ul id="legend"></ul>
+      </div>
+    </section>
+
+    <form id="add" class="card add">
+      <input id="amount" type="number" inputmode="decimal" step="0.01" min="0" placeholder="Amount (KES)" aria-label="Amount" required>
+      <select id="cat" aria-label="Category"></select>
+      <input id="date" type="date" aria-label="Date" required>
+      <input id="note" maxlength="120" placeholder="Note (optional)" aria-label="Note">
+      <button>Add expense</button>
+      <p id="err" class="err" role="alert"></p>
+    </form>
+
+    <ul id="list" class="card list"></ul>
+
+    <section class="tools">
+      <label>Monthly budget <input id="budget" type="number" min="0" placeholder="e.g. 30000"></label>
+      <button id="export" class="ghost" type="button">Export CSV</button>
+      <label class="ghost file">Import CSV <input id="import" type="file" accept=".csv,text/csv"></label>
+      <button id="demo" class="ghost" type="button">Add sample data</button>
+    </section>
+    <p id="status" class="muted"></p>
+  </main>
+  <footer>Works offline · data stays on your device (IndexedDB) · <a href="https://github.com/Lekopien/offline-expense-pwa">Source on GitHub</a></footer>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

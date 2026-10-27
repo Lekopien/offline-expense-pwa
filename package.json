@@ -1,0 +1,11 @@
+{
+  "name": "offline-expense-pwa",
+  "version": "1.0.0",
+  "description": "Installable, offline-first expense tracker (PWA) in vanilla JavaScript with IndexedDB.",
+  "type": "module",
+  "scripts": {
+    "start": "npx --yes serve@14 app",
+    "test": "node --test"
+  },
+  "license": "MIT"
+}
